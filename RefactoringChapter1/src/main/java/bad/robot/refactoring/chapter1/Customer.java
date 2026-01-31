@@ -29,8 +29,6 @@ public class Customer {
         
         for (Rental rental : rentals) 
         {
-    		double amount = rental.getCharge();
-    		
             // add frequent renter points
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -38,9 +36,9 @@ public class Customer {
                 frequentRenterPoints++;
 
             // show figures for this rental
-            result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(amount) + "\n";
+            result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "\n";
 
-            totalAmount += amount;
+            totalAmount += rental.getCharge();
         }
 
         result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
