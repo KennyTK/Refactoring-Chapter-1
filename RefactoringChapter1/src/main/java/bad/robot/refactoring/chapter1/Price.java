@@ -9,11 +9,6 @@ public abstract class Price
         double amount = 0;
         switch (getPriceCode()) 
         {
-            case Movie.REGULAR:
-                amount += 2;
-                if (daysRented > 2)
-                    amount += (daysRented - 2) * 1.5;
-                break;
             case Movie.NEW_RELEASE:
                 amount += daysRented * 3;
                 break;
