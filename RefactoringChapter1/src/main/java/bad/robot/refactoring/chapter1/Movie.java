@@ -18,6 +18,10 @@ public class Movie {
         return title;
     }
     
+    public void setPriceCode(int priceCode) {
+        this.priceCode = priceCode;
+    }
+    
     public int getFrequentRenterPoints(int daysRented) 
     {
         if (priceCode == Movie.NEW_RELEASE && daysRented > 1)
