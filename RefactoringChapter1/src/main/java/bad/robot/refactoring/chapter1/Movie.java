@@ -17,18 +17,10 @@ public class Movie {
     public String getTitle() {
         return title;
     }
-
-    public int getPriceCode() {
-        return priceCode;
-    }
-
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
-    }
     
     public int getFrequentRenterPoints(int daysRented) 
     {
-        if (getPriceCode() == Movie.NEW_RELEASE && daysRented > 1)
+        if (priceCode == Movie.NEW_RELEASE && daysRented > 1)
             return 2;
         else
         	return 1;
@@ -37,7 +29,7 @@ public class Movie {
     public double getCharge(int daysRented) 
     {
         double amount = 0;
-        switch (getPriceCode()) {
+        switch (priceCode) {
             case REGULAR:
                 amount += 2;
                 if (daysRented > 2)
